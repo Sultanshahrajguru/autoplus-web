@@ -1,0 +1,21 @@
+import { Button } from '../components/ui/Button'
+
+export function NotFoundPage() {
+  return (
+    <section className="section-wrap flex min-h-[70vh] flex-col items-center justify-center gap-6 py-24 text-center">
+      <span className="eyebrow">404</span>
+      <h1 className="font-display text-5xl font-semibold uppercase tracking-tight text-white sm:text-7xl">
+        Page not found
+      </h1>
+      <p className="max-w-xl text-base leading-8 text-metal-300">
+        The page you are looking for is not available. Head back to AutoPlus home, explore services, or find the nearest centre.
+      </p>
+      <div className="flex flex-wrap justify-center gap-3">
+        <Button to="/">Go Home</Button>
+        <Button to="/locations" variant="secondary">
+          Find a Centre
+        </Button>
+      </div>
+    </section>
+  )
+}

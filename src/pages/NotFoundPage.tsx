@@ -4,7 +4,7 @@ export function NotFoundPage() {
   return (
     <section className="section-wrap flex min-h-[70vh] flex-col items-center justify-center gap-6 py-24 text-center">
       <span className="eyebrow">404</span>
-      <h1 className="font-display text-5xl font-semibold uppercase tracking-tight text-white sm:text-7xl">
+      <h1 className="font-display text-5xl font-semibold uppercase tracking-tight text-graphite-950 sm:text-7xl">
         Page not found
       </h1>
       <p className="max-w-xl text-base leading-8 text-metal-300">

@@ -9,9 +9,9 @@ export function ReviewCard({ review }: { review: Review }) {
           <Star className="h-4 w-4 fill-current" key={index} />
         ))}
       </div>
-      <p className="text-base leading-7 text-metal-100">“{review.quote}”</p>
-      <div className="mt-auto border-t border-white/10 pt-4">
-        <p className="font-semibold text-white">{review.name}</p>
+      <p className="text-base leading-7 text-metal-200">“{review.quote}”</p>
+      <div className="mt-auto border-t border-graphite-900/8 pt-4">
+        <p className="font-semibold text-graphite-950">{review.name}</p>
         <p className="text-sm text-metal-300">
           {review.location} • {review.service}
         </p>

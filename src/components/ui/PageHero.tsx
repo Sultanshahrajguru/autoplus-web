@@ -28,8 +28,8 @@ export function PageHero({
   aside,
 }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-white/8 pb-16 pt-32 sm:pb-20 sm:pt-36">
-      <div className="absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top_right,rgba(200,91,34,0.18),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.03),transparent_55%)]" />
+    <section className="relative overflow-hidden border-b border-graphite-900/8 pb-16 pt-32 sm:pb-20 sm:pt-36">
+      <div className="absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top_right,rgba(200,91,34,0.12),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.8),transparent_55%)]" />
       <div className="section-wrap relative grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_380px] lg:items-end">
         <div className="flex flex-col gap-6 fade-up">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm text-metal-300">
@@ -41,7 +41,7 @@ export function PageHero({
             ))}
           </nav>
           <span className="eyebrow">{eyebrow}</span>
-          <h1 className="max-w-4xl font-display text-5xl font-semibold uppercase leading-[0.92] tracking-tight text-white text-balance sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl font-display text-5xl font-semibold uppercase leading-[0.92] tracking-tight text-graphite-950 text-balance sm:text-6xl lg:text-7xl">
             {title}
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-metal-300">{copy}</p>

@@ -30,12 +30,12 @@ export function AboutPage() {
       <PageHero
         aside={
           <div className="panel-dark p-6">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
               AutoPlus at a glance
             </p>
             <div className="mt-6 grid gap-3">
               {['Established in 1990', '11 Victorian locations', 'Qualified mechanics', 'Conversion-focused customer journey'].map((item) => (
-                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-metal-200" key={item}>
+                <div className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3 text-sm text-metal-200" key={item}>
                   {item}
                 </div>
               ))}
@@ -69,10 +69,10 @@ export function AboutPage() {
               const Icon = pillar.icon
               return (
                 <article className="panel-dark p-6" key={pillar.title}>
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/6">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-graphite-900/8 bg-metal-100">
                     <Icon className="h-5 w-5 text-accent" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold uppercase tracking-[0.05em] text-white">
+                  <h3 className="font-display text-xl font-semibold uppercase tracking-[0.05em] text-graphite-950">
                     {pillar.title}
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-metal-300">{pillar.copy}</p>

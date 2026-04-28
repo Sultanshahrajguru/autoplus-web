@@ -6,21 +6,21 @@ import { formatPhoneForHref } from '../../lib/utils'
 import { Button } from '../ui/Button'
 
 const activeClass = ({ isActive }: { isActive: boolean }) =>
-  `transition ${isActive ? 'text-white' : 'text-metal-300 hover:text-white'}`
+  `transition ${isActive ? 'text-graphite-950' : 'text-metal-300 hover:text-graphite-950'}`
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-graphite-950/86 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-graphite-900/8 bg-white/88 backdrop-blur-md">
       <div className="section-wrap">
         <div className="flex h-20 items-center justify-between gap-4">
           <Link className="flex items-center gap-3" to="/">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/6 font-display text-lg font-bold tracking-[0.18em] text-white">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-graphite-900/10 bg-metal-100 font-display text-lg font-bold tracking-[0.18em] text-graphite-950">
               AP
             </span>
             <div>
-              <p className="font-display text-2xl font-semibold uppercase tracking-[0.12em] text-white">
+              <p className="font-display text-2xl font-semibold uppercase tracking-[0.12em] text-graphite-950">
                 AutoPlus
               </p>
               <p className="text-xs uppercase tracking-[0.24em] text-metal-300">
@@ -39,7 +39,7 @@ export function Header() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <a
-              className="inline-flex items-center gap-2 text-sm text-metal-200 transition hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-metal-300 transition hover:text-graphite-950"
               href={formatPhoneForHref('(03) 9018 2100')}
             >
               <Phone className="h-4 w-4 text-accent" />
@@ -51,7 +51,7 @@ export function Header() {
           <button
             aria-expanded={isOpen}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/6 text-white lg:hidden"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-graphite-900/10 bg-white text-graphite-950 lg:hidden"
             onClick={() => setIsOpen((open) => !open)}
             type="button"
           >
@@ -61,7 +61,7 @@ export function Header() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-white/8 bg-graphite-950/96 lg:hidden">
+        <div className="border-t border-graphite-900/8 bg-white/96 lg:hidden">
           <div className="section-wrap flex flex-col gap-4 py-5">
             {navItems.map((item) => (
               <NavLink

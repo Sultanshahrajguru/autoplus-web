@@ -2,29 +2,29 @@
 @import "tailwindcss";
 
 @theme {
-  --color-graphite-950: #090a0d;
-  --color-graphite-900: #101216;
-  --color-graphite-850: #151820;
-  --color-graphite-800: #1b1f28;
-  --color-graphite-700: #272c36;
-  --color-graphite-600: #404754;
-  --color-graphite-500: #6d7480;
-  --color-metal-400: #98a2ae;
-  --color-metal-300: #c3c8d1;
-  --color-metal-200: #d9dde4;
-  --color-metal-100: #eef1f5;
+  --color-graphite-950: #111418;
+  --color-graphite-900: #1c2128;
+  --color-graphite-850: #262c34;
+  --color-graphite-800: #353d48;
+  --color-graphite-700: #4c5663;
+  --color-graphite-600: #65707f;
+  --color-graphite-500: #8390a0;
+  --color-metal-400: #7f8995;
+  --color-metal-300: #5f6977;
+  --color-metal-200: #3e4754;
+  --color-metal-100: #f4f5f7;
   --color-accent: #c85b22;
   --color-accent-soft: #f3c4ad;
   --font-sans: 'Manrope', sans-serif;
   --font-display: 'Barlow', sans-serif;
-  --shadow-panel: 0 20px 60px rgba(0, 0, 0, 0.24);
-  --shadow-card: 0 16px 40px rgba(7, 10, 14, 0.14);
+  --shadow-panel: 0 20px 55px rgba(17, 20, 24, 0.08);
+  --shadow-card: 0 16px 40px rgba(17, 20, 24, 0.12);
 }
 
 @layer base {
   :root {
-    color: #edf1f5;
-    background-color: #090a0d;
+    color: #1c2128;
+    background-color: #f5f6f8;
     font-family: var(--font-sans);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -46,9 +46,9 @@
     margin: 0;
     min-width: 320px;
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18%),
-      linear-gradient(135deg, #090a0d 0%, #11151b 38%, #090a0d 100%);
-    color: #dfe5ea;
+      linear-gradient(180deg, rgba(255, 255, 255, 0.55), transparent 18%),
+      linear-gradient(135deg, #f6f7f8 0%, #eceff2 42%, #f7f7f8 100%);
+    color: #1c2128;
   }
 
   a {
@@ -71,7 +71,7 @@
 
 @layer components {
   .page-shell {
-    @apply min-h-screen bg-transparent text-metal-100;
+    @apply min-h-screen bg-transparent text-graphite-900;
   }
 
   .section-wrap {
@@ -79,11 +79,11 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-metal-200;
+    @apply inline-flex items-center gap-2 rounded-full border border-graphite-900/10 bg-white px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-metal-300;
   }
 
   .section-title {
-    @apply font-display text-4xl font-semibold uppercase leading-none tracking-tight text-white sm:text-5xl;
+    @apply font-display text-4xl font-semibold uppercase leading-none tracking-tight text-graphite-950 sm:text-5xl;
   }
 
   .section-copy {
@@ -91,7 +91,7 @@
   }
 
   .panel-dark {
-    @apply rounded-[28px] border border-white/10 bg-white/[0.04] backdrop-blur-sm;
+    @apply rounded-[28px] border border-graphite-900/8 bg-white;
     box-shadow: var(--shadow-panel);
   }
 
@@ -101,7 +101,7 @@
   }
 
   .metal-line {
-    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.32) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(17, 20, 24, 0.12) 50%, transparent 100%);
   }
 }
 
@@ -112,8 +112,8 @@
 
   .grid-road {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      linear-gradient(rgba(17, 20, 24, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(17, 20, 24, 0.05) 1px, transparent 1px);
     background-size: 42px 42px;
   }
 

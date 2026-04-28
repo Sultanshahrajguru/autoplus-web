@@ -23,14 +23,14 @@ export function ServiceDetailPage() {
       <PageHero
         aside={
           <div className="panel-dark p-6">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/6">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-graphite-900/8 bg-metal-100">
               <Icon className="h-7 w-7 text-accent" />
             </div>
-            <p className="mt-6 font-display text-2xl font-semibold uppercase tracking-[0.08em] text-white">
+            <p className="mt-6 font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
               What to expect
             </p>
             <p className="mt-3 text-sm leading-7 text-metal-300">{service.estimate}</p>
-            <div className="mt-6 rounded-2xl border border-white/10 bg-black/18 p-4 text-sm leading-7 text-metal-200">
+            <div className="mt-6 rounded-2xl border border-graphite-900/8 bg-metal-100 p-4 text-sm leading-7 text-metal-200">
               {service.intro}
             </div>
           </div>
@@ -63,38 +63,38 @@ export function ServiceDetailPage() {
           </article>
 
           <aside className="panel-dark p-7">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
               Estimate guidance
             </p>
             <p className="mt-4 text-sm leading-7 text-metal-300">{service.estimate}</p>
-            <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/10 p-4 text-sm leading-7 text-metal-100">
+            <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/10 p-4 text-sm leading-7 text-metal-200">
               Final timing and pricing depend on vehicle type, workshop findings, and whether additional components are required.
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="border-y border-white/8 bg-white/[0.025] py-20 sm:py-24">
+      <section className="border-y border-graphite-900/8 bg-[#eef1f4] py-20 sm:py-24">
         <div className="section-wrap grid gap-6 lg:grid-cols-2">
           <article className="panel-dark p-7">
-            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-white">
+            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
               Common symptoms
             </h2>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-metal-300">
               {service.symptoms.map((item) => (
-                <li className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" key={item}>
+                <li className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3" key={item}>
                   {item}
                 </li>
               ))}
             </ul>
           </article>
           <article className="panel-dark p-7">
-            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-white">
+            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
               Why it matters
             </h2>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-metal-300">
               {service.whyItMatters.map((item) => (
-                <li className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" key={item}>
+                <li className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3" key={item}>
                   {item}
                 </li>
               ))}
@@ -106,7 +106,7 @@ export function ServiceDetailPage() {
       <section className="py-20 sm:py-24">
         <div className="section-wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_420px]">
           <div>
-            <h2 className="font-display text-4xl font-semibold uppercase tracking-[0.04em] text-white">
+            <h2 className="font-display text-4xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
               Frequently asked questions
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-metal-300">
@@ -117,17 +117,17 @@ export function ServiceDetailPage() {
             </div>
           </div>
           <aside className="panel-dark p-7">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
               Related services
             </p>
             <div className="mt-6 space-y-3">
               {related.map((item) => (
                 <Link
-                  className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-4 transition hover:border-white/20"
+                  className="flex items-center justify-between rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-4 transition hover:border-graphite-900/16"
                   key={item.slug}
                   to={`/services/${item.slug}`}
                 >
-                  <span className="font-medium text-white">{item.title}</span>
+                  <span className="font-medium text-graphite-950">{item.title}</span>
                   <ArrowRight className="h-4 w-4 text-accent" />
                 </Link>
               ))}

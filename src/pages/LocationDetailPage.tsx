@@ -18,7 +18,7 @@ export function LocationDetailPage() {
       <PageHero
         aside={
           <div className="panel-dark p-6">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
               Centre details
             </p>
             <div className="mt-6 space-y-4 text-sm text-metal-200">
@@ -76,17 +76,17 @@ export function LocationDetailPage() {
           </div>
 
           <aside className="panel-dark p-7">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
               Map placeholder
             </p>
-            <div className="mt-5 rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-5">
-              <div className="grid-road flex h-64 items-end rounded-[20px] border border-white/8 p-5">
+            <div className="mt-5 rounded-[28px] border border-graphite-900/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7))] p-5">
+              <div className="grid-road flex h-64 items-end rounded-[20px] border border-graphite-900/8 p-5">
                 <div>
-                  <p className="font-display text-xl font-semibold uppercase tracking-[0.08em] text-white">
+                  <p className="font-display text-xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
                     {location.suburb}
                   </p>
                   <p className="mt-2 text-sm text-metal-300">{location.coordinatesLabel}</p>
-                  <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-accent-soft">
+                  <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/8 px-3 py-1 text-xs uppercase tracking-[0.18em] text-accent">
                     Interactive map to be connected later
                   </p>
                 </div>
@@ -96,39 +96,39 @@ export function LocationDetailPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/8 bg-white/[0.025] py-20 sm:py-24">
+      <section className="border-y border-graphite-900/8 bg-[#eef1f4] py-20 sm:py-24">
         <div className="section-wrap grid gap-6 lg:grid-cols-3">
           <article className="panel-dark p-7">
-            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-white">
+            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
               Services available
             </h2>
             <div className="mt-6 flex flex-wrap gap-3">
               {location.services.map((service) => (
-                <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-metal-200" key={service}>
+                <span className="rounded-full border border-graphite-900/8 px-4 py-2 text-sm text-metal-200" key={service}>
                   {service}
                 </span>
               ))}
             </div>
           </article>
           <article className="panel-dark p-7">
-            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-white">
+            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
               Local trust points
             </h2>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-metal-300">
               {location.trustPoints.map((point) => (
-                <li className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" key={point}>
+                <li className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3" key={point}>
                   {point}
                 </li>
               ))}
             </ul>
           </article>
           <article className="panel-dark p-7">
-            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-white">
+            <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
               Nearby suburbs
             </h2>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-metal-300">
               {location.nearbySuburbs.map((suburb) => (
-                <li className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" key={suburb}>
+                <li className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3" key={suburb}>
                   {suburb}
                 </li>
               ))}
@@ -140,7 +140,7 @@ export function LocationDetailPage() {
       <section className="py-20 sm:py-24">
         <div className="section-wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
           <div>
-            <h2 className="font-display text-4xl font-semibold uppercase tracking-[0.04em] text-white">
+            <h2 className="font-display text-4xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
               Customer feedback
             </h2>
             <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -151,15 +151,15 @@ export function LocationDetailPage() {
                       <Star className="h-4 w-4 fill-current" key={index} />
                     ))}
                   </div>
-                  <p className="mt-4 text-base leading-7 text-metal-100">“{review.quote}”</p>
-                  <p className="mt-4 font-semibold text-white">{review.name}</p>
+                  <p className="mt-4 text-base leading-7 text-metal-200">“{review.quote}”</p>
+                  <p className="mt-4 font-semibold text-graphite-950">{review.name}</p>
                   <p className="text-sm text-metal-300">{review.service}</p>
                 </article>
               ))}
             </div>
           </div>
           <aside className="panel-dark p-7">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
               Book this centre
             </p>
             <p className="mt-4 text-sm leading-7 text-metal-300">
@@ -173,7 +173,7 @@ export function LocationDetailPage() {
                 Call Centre
               </Button>
               <Link
-                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-white"
+                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-graphite-950"
                 to="/locations"
               >
                 View other centres <ArrowRight className="h-4 w-4 text-accent" />

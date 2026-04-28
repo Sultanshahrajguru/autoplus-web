@@ -31,7 +31,7 @@ export function HowItWorksSection() {
                   </span>
                   <Icon className="h-5 w-5 text-accent" />
                 </div>
-                <h3 className="font-display text-xl font-semibold uppercase tracking-[0.05em] text-white">
+                <h3 className="font-display text-xl font-semibold uppercase tracking-[0.05em] text-graphite-950">
                   {step.title}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-metal-300">{step.copy}</p>

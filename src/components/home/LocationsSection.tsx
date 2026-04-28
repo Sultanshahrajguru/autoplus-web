@@ -6,7 +6,7 @@ import { SectionIntro } from '../ui/SectionIntro'
 
 export function LocationsSection() {
   return (
-    <section className="border-y border-white/8 bg-white/[0.025] py-20 sm:py-24">
+    <section className="border-y border-graphite-900/8 bg-[#eef1f4] py-20 sm:py-24">
       <div className="section-wrap space-y-10">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionIntro
@@ -21,9 +21,9 @@ export function LocationsSection() {
 
         <div className="grid gap-5 xl:grid-cols-[1.1fr_1fr]">
           <div className="panel-dark relative overflow-hidden p-6 sm:p-8">
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04),transparent_42%,rgba(200,91,34,0.12)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.9),transparent_42%,rgba(200,91,34,0.08)_100%)]" />
             <div className="relative">
-              <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-white">
+              <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
                 Victoria Coverage
               </p>
               <p className="mt-3 max-w-lg text-sm leading-7 text-metal-300">
@@ -31,9 +31,9 @@ export function LocationsSection() {
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {['Metro East', 'Metro West', 'South-East', 'Regional Victoria'].map((zone) => (
-                  <div className="rounded-2xl border border-white/10 bg-black/18 p-4" key={zone}>
+                  <div className="rounded-2xl border border-graphite-900/8 bg-metal-100 p-4" key={zone}>
                     <p className="text-xs uppercase tracking-[0.22em] text-metal-400">Zone</p>
-                    <p className="mt-2 font-semibold text-white">{zone}</p>
+                    <p className="mt-2 font-semibold text-graphite-950">{zone}</p>
                   </div>
                 ))}
               </div>
@@ -45,7 +45,7 @@ export function LocationsSection() {
               <article className="panel-dark p-5" key={location.slug}>
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h3 className="font-display text-2xl font-semibold uppercase tracking-[0.05em] text-white">
+                    <h3 className="font-display text-2xl font-semibold uppercase tracking-[0.05em] text-graphite-950">
                       {location.suburb}
                     </h3>
                     <p className="mt-2 inline-flex items-start gap-2 text-sm leading-6 text-metal-300">
@@ -58,10 +58,10 @@ export function LocationsSection() {
                     </p>
                   </div>
                   <Link
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/6"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-graphite-900/8 bg-metal-100"
                     to={`/locations/${location.slug}`}
                   >
-                    <ArrowRight className="h-4 w-4 text-white" />
+                    <ArrowRight className="h-4 w-4 text-graphite-950" />
                   </Link>
                 </div>
               </article>

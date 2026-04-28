@@ -31,7 +31,7 @@ export function FranchisingPage() {
       <PageHero
         aside={
           <div className="panel-dark p-6">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
               Franchise interest
             </p>
             <p className="mt-4 text-sm leading-7 text-metal-300">
@@ -54,10 +54,10 @@ export function FranchisingPage() {
               const Icon = point.icon
               return (
                 <article className="panel-dark p-6" key={point.title}>
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/6">
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-graphite-900/8 bg-metal-100">
                     <Icon className="h-5 w-5 text-accent" />
                   </div>
-                  <h2 className="font-display text-2xl font-semibold uppercase tracking-[0.05em] text-white">
+                  <h2 className="font-display text-2xl font-semibold uppercase tracking-[0.05em] text-graphite-950">
                     {point.title}
                   </h2>
                   <p className="mt-3 text-sm leading-7 text-metal-300">{point.copy}</p>

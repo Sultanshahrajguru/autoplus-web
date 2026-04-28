@@ -26,7 +26,7 @@ const points = [
 
 export function WhyChooseSection() {
   return (
-    <section className="border-y border-white/8 bg-white/[0.025] py-20 sm:py-24">
+    <section className="border-y border-graphite-900/8 bg-[#eef1f4] py-20 sm:py-24">
       <div className="section-wrap grid gap-10 lg:grid-cols-[0.88fr_minmax(0,1fr)]">
         <SectionIntro
           eyebrow="Why Choose AutoPlus"
@@ -38,10 +38,10 @@ export function WhyChooseSection() {
             const Icon = point.icon
             return (
               <article className="panel-dark p-6" key={point.title}>
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/6">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-graphite-900/8 bg-metal-100">
                   <Icon className="h-5 w-5 text-accent" />
                 </div>
-                <h3 className="font-display text-xl font-semibold uppercase tracking-[0.05em] text-white">
+                <h3 className="font-display text-xl font-semibold uppercase tracking-[0.05em] text-graphite-950">
                   {point.title}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-metal-300">{point.copy}</p>

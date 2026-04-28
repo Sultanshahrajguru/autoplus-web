@@ -9,12 +9,12 @@ export function LocationsPage() {
       <PageHero
         aside={
           <div className="panel-dark p-6">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
               Find your nearest centre
             </p>
             <div className="mt-6 grid gap-3">
               {['Metro East and South-East', 'Inner and outer west', 'Regional Victoria coverage'].map((item) => (
-                <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-metal-200" key={item}>
+                <div className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3 text-sm text-metal-200" key={item}>
                   {item}
                 </div>
               ))}

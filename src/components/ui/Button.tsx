@@ -15,11 +15,11 @@ const styles = {
   primary:
     'bg-accent text-white hover:bg-[#d56c36] focus-visible:outline-accent',
   secondary:
-    'border border-white/14 bg-white/8 text-white hover:bg-white/12 focus-visible:outline-white',
+    'border border-graphite-900/12 bg-white text-graphite-950 hover:bg-metal-100 focus-visible:outline-accent',
   ghost:
     'border border-graphite-900/10 bg-white text-graphite-900 hover:bg-metal-100 focus-visible:outline-accent',
   light:
-    'border border-white/14 bg-white text-graphite-950 hover:bg-metal-100 focus-visible:outline-accent',
+    'border border-graphite-900/12 bg-white text-graphite-950 hover:bg-metal-100 focus-visible:outline-accent',
 }
 
 const baseClass =

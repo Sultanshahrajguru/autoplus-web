@@ -17,15 +17,15 @@ export function PopularServicesSection() {
             const Icon = service.icon
             return (
               <article className="panel-dark group flex h-full flex-col p-6" key={service.slug}>
-                <div className="mb-10 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/6">
+                <div className="mb-10 flex h-14 w-14 items-center justify-center rounded-2xl border border-graphite-900/8 bg-metal-100">
                   <Icon className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="font-display text-2xl font-semibold uppercase tracking-[0.05em] text-white">
+                <h3 className="font-display text-2xl font-semibold uppercase tracking-[0.05em] text-graphite-950">
                   {service.shortTitle}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-metal-300">{service.summary}</p>
                 <Link
-                  className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold uppercase tracking-[0.14em] text-white"
+                  className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold uppercase tracking-[0.14em] text-graphite-950"
                   to={`/services/${service.slug}`}
                 >
                   Explore service

@@ -9,7 +9,7 @@ export function ContactPage() {
       <PageHero
         aside={
           <div className="panel-dark p-6">
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-white">
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
               Quick contact
             </p>
             <div className="mt-6 space-y-4 text-sm text-metal-200">
@@ -96,26 +96,26 @@ export function ContactPage() {
 
           <aside className="space-y-6">
             <div className="panel-dark p-7">
-              <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-white">
+              <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
                 Prefer to call?
               </p>
               <p className="mt-4 text-sm leading-7 text-metal-300">
                 Call our central booking line and we will direct you to the most suitable AutoPlus centre.
               </p>
               <a
-                className="mt-6 inline-flex text-lg font-semibold text-white"
+                className="mt-6 inline-flex text-lg font-semibold text-graphite-950"
                 href={formatPhoneForHref('(03) 9018 2100')}
               >
                 (03) 9018 2100
               </a>
             </div>
             <div className="panel-dark p-7">
-              <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-white">
+              <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
                 Why customers enquire
               </p>
               <ul className="mt-6 space-y-3 text-sm leading-7 text-metal-300">
                 {['Upcoming scheduled service', 'Quote for diagnostics or warning lights', 'Brake, battery, or A/C concerns', 'Help finding the right centre'].map((item) => (
-                  <li className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3" key={item}>
+                  <li className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3" key={item}>
                     {item}
                   </li>
                 ))}

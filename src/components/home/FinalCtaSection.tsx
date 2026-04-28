@@ -8,7 +8,7 @@ export function FinalCtaSection() {
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <span className="eyebrow">Ready When You Are</span>
-              <h2 className="mt-5 max-w-3xl font-display text-4xl font-semibold uppercase leading-none tracking-tight text-white sm:text-5xl">
+              <h2 className="mt-5 max-w-3xl font-display text-4xl font-semibold uppercase leading-none tracking-tight text-graphite-950 sm:text-5xl">
                 Ready to book your next service?
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-metal-300 sm:text-lg">

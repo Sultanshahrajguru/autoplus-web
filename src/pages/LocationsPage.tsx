@@ -10,10 +10,10 @@ export function LocationsPage() {
         aside={
           <div className="panel-dark p-6">
             <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
-              Find your nearest centre
+              Coverage notes
             </p>
             <div className="mt-6 grid gap-3">
-              {['Metro East and South-East', 'Inner and outer west', 'Regional Victoria coverage'].map((item) => (
+              {['Service availability depends on suburb', 'Access and parking matter', 'Roadside help varies by location'].map((item) => (
                 <div className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3 text-sm text-metal-200" key={item}>
                   {item}
                 </div>
@@ -21,22 +21,22 @@ export function LocationsPage() {
             </div>
           </div>
         }
-        copy="AutoPlus locations are structured to make booking simple whether you need a local commuter service, a warning-light diagnosis, or a practical repair quote."
-        crumbs={[{ label: 'Home', to: '/' }, { label: 'Locations' }]}
-        eyebrow="Locations"
-        primaryCta={{ label: 'Book a Service', to: '/contact' }}
-        secondaryCta={{ label: 'Browse Services', to: '/services' }}
-        title="Eleven service centres positioned across Victoria."
+        copy="On-Spot Mobile Mechanix services selected Melbourne and nearby areas. Coverage depends on your exact service location, access conditions, and booking availability."
+        crumbs={[{ label: 'Home', to: '/' }, { label: 'Areas We Serve' }]}
+        eyebrow="Areas We Serve"
+        primaryCta={{ label: 'Book Mobile Mechanic', to: '/contact' }}
+        secondaryCta={{ label: 'Check Your Area', to: '/contact' }}
+        title="Areas we serve for mobile mechanic bookings."
       />
 
       <section className="py-20 sm:py-24">
         <div className="section-wrap space-y-10">
           <SectionIntro
-            eyebrow="Centre Directory"
-            title="Choose the workshop that fits your route."
-            copy="Each AutoPlus location offers core servicing and repair capability, with local teams ready to inspect, quote, and coordinate the work clearly."
+            eyebrow="Coverage Areas"
+            title="Choose the area that is closest to your service location."
+            copy="These area pages are designed to help customers understand typical coverage and nearby suburbs. Final availability still depends on the specific address and the type of work requested."
           />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {locations.map((location) => (
               <LocationCard key={location.slug} location={location} />
             ))}

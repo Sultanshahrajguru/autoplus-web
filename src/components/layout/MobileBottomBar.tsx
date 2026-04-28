@@ -2,9 +2,9 @@ import { MapPin, Phone, Wrench } from 'lucide-react'
 import { formatPhoneForHref } from '../../lib/utils'
 
 const actions = [
-  { label: 'Call', href: formatPhoneForHref('(03) 9018 2100'), icon: Phone },
+  { label: 'Call', href: formatPhoneForHref('0400 000 000'), icon: Phone },
   { label: 'Book', href: '/contact', icon: Wrench },
-  { label: 'Find Centre', href: '/locations', icon: MapPin },
+  { label: 'Quote', href: '/contact', icon: MapPin },
 ]
 
 export function MobileBottomBar() {

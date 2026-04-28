@@ -1,37 +1,42 @@
-import { CheckCheck, MapPinned, Shield, Sparkles } from 'lucide-react'
+import { CarTaxiFront, ClipboardList, Clock3, ShieldCheck, UserRoundCog } from 'lucide-react'
 import { SectionIntro } from '../ui/SectionIntro'
 
 const points = [
   {
-    title: 'Qualified mechanics',
-    copy: 'Every AutoPlus centre is built around skilled workshop processes, modern inspections, and proper service discipline.',
-    icon: Shield,
+    title: 'Convenient mobile service',
+    copy: 'We come to your home, office, or other suitable location so you do not lose time travelling to a garage.',
+    icon: CarTaxiFront,
   },
   {
-    title: 'Transparent advice',
-    copy: 'You get practical recommendations with clear priorities, not vague jargon or pressure-driven upselling.',
-    icon: CheckCheck,
+    title: 'Clear quotes before work',
+    copy: 'You get practical information about the issue and clear approval steps before repair work goes ahead.',
+    icon: ClipboardList,
   },
   {
-    title: 'Local service centres',
-    copy: 'A multi-location Victoria footprint makes it easier to book close to home, work, or the school run.',
-    icon: MapPinned,
+    title: 'Experienced mechanics',
+    copy: 'On-Spot is focused on solving common car service and repair problems efficiently at the location that suits you.',
+    icon: UserRoundCog,
   },
   {
-    title: 'Reliable repairs',
-    copy: 'We focus on diagnosing correctly, quoting clearly, and delivering dependable repair outcomes the first time.',
-    icon: Sparkles,
+    title: 'No waiting rooms',
+    copy: 'A mobile visit makes everyday servicing easier for workdays, family schedules, and urgent car issues.',
+    icon: Clock3,
+  },
+  {
+    title: 'Service at home or work',
+    copy: 'Many maintenance and repair jobs can be inspected and completed where the vehicle is already parked.',
+    icon: ShieldCheck,
   },
 ]
 
 export function WhyChooseSection() {
   return (
-    <section className="border-y border-graphite-900/8 bg-[#eef1f4] py-20 sm:py-24">
+    <section className="border-y border-graphite-900/8 bg-[#f4f5f8] py-20 sm:py-24">
       <div className="section-wrap grid gap-10 lg:grid-cols-[0.88fr_minmax(0,1fr)]">
         <SectionIntro
-          eyebrow="Why Choose AutoPlus"
-          title="Automotive service built for trust, not guesswork."
-          copy="AutoPlus is positioned between the impersonal dealership experience and the inconsistent local workshop. The result is a cleaner, more dependable ownership experience."
+          eyebrow="Why Choose On-Spot"
+          title="A mobile mechanic service built around convenience and clear communication."
+          copy="This site should feel like a practical service business: local, responsive, and focused on getting your car checked without the hassle of a garage visit."
         />
         <div className="grid gap-5 sm:grid-cols-2">
           {points.map((point) => {

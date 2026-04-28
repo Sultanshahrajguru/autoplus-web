@@ -8,12 +8,12 @@ export function NotFoundPage() {
         Page not found
       </h1>
       <p className="max-w-xl text-base leading-8 text-metal-300">
-        The page you are looking for is not available. Head back to AutoPlus home, explore services, or find the nearest centre.
+        That page is not available. Head back home, explore services, or request a mobile mechanic booking.
       </p>
       <div className="flex flex-wrap justify-center gap-3">
         <Button to="/">Go Home</Button>
-        <Button to="/locations" variant="secondary">
-          Find a Centre
+        <Button to="/contact" variant="secondary">
+          Book Now
         </Button>
       </div>
     </section>

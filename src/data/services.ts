@@ -1,287 +1,335 @@
 import {
   Activity,
   BatteryCharging,
-  Gauge,
+  CarFront,
+  CircleAlert,
   SearchCheck,
   ShieldCheck,
-  Snowflake,
+  TimerReset,
   Wrench,
 } from 'lucide-react'
 import type { Service } from '../lib/types'
 
 export const services: Service[] = [
   {
-    slug: 'log-book-servicing',
-    title: 'Log Book Servicing',
-    shortTitle: 'Log Book Service',
-    summary: 'Dealer-standard servicing that protects your warranty and keeps your maintenance history in shape.',
+    slug: 'mobile-log-book-servicing',
+    title: 'Mobile Log Book Servicing',
+    shortTitle: 'Mobile Log Book Servicing',
+    summary: 'Scheduled servicing carried out at your home or workplace using a practical mobile setup.',
     intro:
-      'AutoPlus delivers scheduled servicing to manufacturer requirements using quality parts, approved fluids, and a clear report on your vehicle’s condition.',
+      'On-Spot Mobile Mechanix performs log book servicing on-site for many everyday vehicles, helping you keep up with maintenance without organising a garage drop-off.',
     includes: [
-      'Manufacturer-scheduled checks and maintenance items',
-      'Engine oil, filters, and fluid top-ups where applicable',
-      'Tyre, brake, battery, and safety inspection',
-      'Digital service report with recommendations in plain language',
+      'Scheduled service items completed on-site where suitable',
+      'Oil, filters, fluid checks, and general safety inspection',
+      'Service notes and practical maintenance advice',
+      'Convenient booking at your home or workplace',
     ],
     symptoms: [
-      'Upcoming service interval or dashboard reminder',
-      'Vehicle due for capped-price or scheduled maintenance',
-      'You want warranty-safe servicing outside the dealership network',
+      'Your service interval is due',
+      'You want routine maintenance without losing time at a garage',
+      'You need a more convenient option for a busy weekday',
     ],
     whyItMatters: [
-      'Protects resale value with a complete service history',
-      'Keeps wear items monitored before they become bigger repairs',
-      'Maintains performance, efficiency, and manufacturer compliance',
+      'Routine servicing helps reduce breakdown risk',
+      'Keeping maintenance up to date can prevent larger repair bills',
+      'A mobile visit saves time and keeps your day moving',
     ],
-    estimate: 'Most log book services are completed same day. Final pricing depends on vehicle make, model, and required service interval.',
+    estimate:
+      'Service timing depends on the vehicle and service schedule. Share your make, model, year, and the service due if known.',
     faq: [
       {
-        question: 'Will an independent log book service affect my warranty?',
+        question: 'What details should I share before booking?',
         answer:
-          'No. Your vehicle can be serviced by a qualified independent workshop as long as the work follows manufacturer requirements and suitable parts and fluids are used.',
+          'Let us know the vehicle make, model, year, registration if available, and whether you know which service is due.',
       },
       {
-        question: 'Can AutoPlus service European or late-model vehicles?',
+        question: 'Can this be done at my home or office?',
         answer:
-          'Yes. Our centres work across everyday family vehicles, fleet vehicles, and many late-model makes requiring model-specific service procedures.',
+          'Yes. Mobile servicing is commonly carried out at home or at work where the vehicle can be accessed safely.',
       },
     ],
-    relatedSlugs: ['diagnostics', 'batteries', 'air-conditioning'],
+    relatedSlugs: ['mobile-diagnostics', 'battery-replacement', 'general-mechanical-repairs'],
     icon: ShieldCheck,
+  },
+  {
+    slug: 'mobile-diagnostics',
+    title: 'Mobile Diagnostics',
+    shortTitle: 'Mobile Diagnostics',
+    summary: 'On-site fault finding for warning lights, starting issues, and drivability concerns.',
+    intro:
+      'If your car is showing a warning light, running poorly, or not starting properly, On-Spot can inspect and diagnose the issue on-site before recommending the next step.',
+    includes: [
+      'Scan-tool diagnostics and fault-code review',
+      'Basic electrical and performance checks',
+      'Clear explanation of likely causes and repair options',
+      'Advice on whether the issue can be repaired on-site',
+    ],
+    symptoms: [
+      'Check engine or other warning lights',
+      'Poor starting, rough running, or reduced power',
+      'Intermittent issues you want checked before they worsen',
+    ],
+    whyItMatters: [
+      'Proper diagnosis avoids replacing the wrong parts',
+      'Early inspection can prevent a simple issue becoming a breakdown',
+      'An on-site visit can save towing or garage coordination',
+    ],
+    estimate:
+      'To help us prepare, share the warning light, symptoms, and whether the vehicle is at home, work, or roadside.',
+    faq: [
+      {
+        question: 'Can you diagnose a car that will not start?',
+        answer:
+          'Yes, in many cases we can inspect non-start issues on-site and determine whether the fault is battery, starter, charging, fuel, or another system.',
+      },
+      {
+        question: 'Will the mechanic come to roadside locations?',
+        answer:
+          'Roadside support depends on access and the type of fault, but we can often assist or advise on the best next step.',
+      },
+    ],
+    relatedSlugs: ['battery-replacement', 'starter-and-alternator', 'emergency-breakdown-help'],
+    icon: SearchCheck,
+  },
+  {
+    slug: 'battery-replacement',
+    title: 'Battery Replacement',
+    shortTitle: 'Battery Replacement',
+    summary: 'Mobile battery testing and replacement so you can get back on the road quickly.',
+    intro:
+      'A flat or failing battery is one of the most common mobile mechanic callouts. On-Spot can test the system, confirm the issue, and replace the battery on-site where required.',
+    includes: [
+      'Battery condition and charging checks',
+      'On-site replacement where suitable',
+      'Terminal and starting-system inspection',
+      'Advice if the issue appears to be alternator-related',
+    ],
+    symptoms: [
+      'Car will not start',
+      'Slow cranking or repeated flat battery issues',
+      'Low-voltage warnings or electrical resets',
+    ],
+    whyItMatters: [
+      'Battery faults can leave you stranded without warning',
+      'A mobile replacement avoids towing or jump-start hassle',
+      'Testing helps confirm whether the battery is actually the problem',
+    ],
+    estimate:
+      'Share your location, vehicle details, and whether the car is currently not starting so we can plan the visit properly.',
+    faq: [
+      {
+        question: 'Can you replace a battery at my home or work?',
+        answer:
+          'Yes. Battery replacements are commonly handled at homes, offices, and other accessible parking locations.',
+      },
+      {
+        question: 'What if the battery is not the real issue?',
+        answer:
+          'We check the charging and starting system as part of the visit so you have a clearer idea of the actual fault.',
+      },
+    ],
+    relatedSlugs: ['starter-and-alternator', 'mobile-diagnostics', 'emergency-breakdown-help'],
+    icon: BatteryCharging,
   },
   {
     slug: 'brake-repairs',
     title: 'Brake Repairs',
-    shortTitle: 'Brakes',
-    summary: 'Brake inspections and repairs that prioritise stopping confidence, consistency, and safety.',
+    shortTitle: 'Brake Repairs',
+    summary: 'Mobile brake inspections and repair work for common braking issues.',
     intro:
-      'From pads and rotors to hydraulic issues and brake feel concerns, AutoPlus diagnoses brake systems properly and explains what is urgent versus what can be planned.',
+      'On-Spot can inspect common brake concerns on-site and advise whether the repair can be completed during the visit or needs a different next step.',
     includes: [
-      'Brake pad and rotor inspection or replacement',
-      'Brake fluid checks and bleeding where required',
-      'Brake noise, pulsation, and pulling diagnosis',
-      'Road-test verification after repair',
+      'Brake noise and brake feel inspection',
+      'Assessment of pads, rotors, and related components',
+      'Quote before work is approved',
+      'Practical advice about urgency and safe next steps',
     ],
     symptoms: [
-      'Squealing, grinding, or pulsation under braking',
-      'Longer stopping distance or soft brake pedal',
-      'Vehicle pulling to one side while braking',
+      'Squealing, grinding, or vibration while braking',
+      'Soft pedal or reduced braking confidence',
+      'Vehicle pulling while braking',
     ],
     whyItMatters: [
-      'Brakes are a primary vehicle safety system',
-      'Early repair often prevents extra rotor and caliper wear',
-      'Consistent braking improves confidence in city and freeway driving',
+      'Brakes are critical to vehicle safety',
+      'Early inspection can prevent further wear and higher costs',
+      'Convenient mobile advice helps you act sooner',
     ],
-    estimate: 'Many pad and rotor jobs can be completed within the day. More complex system faults may require inspection first.',
+    estimate:
+      'When booking, tell us what the brakes are doing, whether the vehicle is safe to drive, and where the car is located.',
     faq: [
       {
-        question: 'How often should brakes be checked?',
+        question: 'Can brake repairs be completed on-site?',
         answer:
-          'Brake condition should be checked at every scheduled service, or sooner if you notice noise, vibration, or reduced stopping performance.',
+          'Many common brake jobs can be handled on-site, depending on access, parts required, and the condition of the vehicle.',
       },
       {
-        question: 'Do you machine rotors or replace them?',
+        question: 'Should I keep driving with noisy brakes?',
         answer:
-          'That depends on rotor thickness, surface condition, and manufacturer specifications. We recommend the safest and most economical path after inspection.',
+          'Not without caution. Brake noises can range from minor wear indicators to urgent faults, so inspection should be arranged promptly.',
       },
     ],
-    relatedSlugs: ['suspension', 'mechanical-repairs', 'diagnostics'],
+    relatedSlugs: ['general-mechanical-repairs', 'mobile-diagnostics', 'emergency-breakdown-help'],
     icon: Activity,
   },
   {
-    slug: 'mechanical-repairs',
-    title: 'Mechanical Repairs',
-    shortTitle: 'Mechanical Repairs',
-    summary: 'Professional repair work for the systems that keep your vehicle dependable day to day.',
+    slug: 'starter-and-alternator',
+    title: 'Starter & Alternator',
+    shortTitle: 'Starter & Alternator',
+    summary: 'Mobile inspection and repair guidance for common starting and charging faults.',
     intro:
-      'AutoPlus handles general mechanical repairs with clear inspection reporting, realistic lead times, and advice designed for long-term reliability.',
+      'When a car clicks, cranks poorly, or loses charge repeatedly, the issue may be related to the starter motor or alternator. On-Spot can inspect the system on-site and advise the best repair path.',
     includes: [
-      'Engine, cooling, steering, and driveline repair work',
-      'Leak, noise, vibration, and warning-light investigation',
-      'Quality parts matched to vehicle usage and budget',
-      'Post-repair testing and workshop quality checks',
+      'Starting and charging-system testing',
+      'Battery, starter, and alternator fault isolation',
+      'Advice on whether replacement can be completed on-site',
+      'Clear explanation before work proceeds',
     ],
     symptoms: [
-      'Fluid leaks, unusual noises, or drivability concerns',
-      'Warning lights or recurring faults',
-      'A vehicle that feels unreliable or overdue for repair',
+      'Clicking when trying to start',
+      'Repeated battery drain',
+      'Charging warnings or electrical dropouts while driving',
     ],
     whyItMatters: [
-      'Timely repair prevents breakdowns and cascading faults',
-      'A proper diagnostic path reduces wasted spend on guesswork',
-      'Reliable repairs keep the car safer and easier to live with',
+      'Starting faults can quickly leave the vehicle unusable',
+      'Correct testing prevents unnecessary part replacement',
+      'Mobile assessment is often the fastest way to confirm the issue',
     ],
-    estimate: 'Repair timing depends on diagnosis, parts availability, and vehicle access. We provide a quote before approved work begins.',
+    estimate:
+      'Please tell us whether the vehicle starts at all, whether it needs jump-starting, and where it is currently parked.',
     faq: [
       {
-        question: 'Can I get an inspection before approving repairs?',
+        question: 'Can this be checked roadside?',
         answer:
-          'Yes. We can inspect the issue first, explain the cause, and then provide a quote so you can approve the next step with confidence.',
+          'In many cases, yes. Access and safety matter, but roadside inspections for no-start and charging problems are a common request.',
       },
       {
-        question: 'Do you work on older vehicles?',
+        question: 'How do I know whether it is the battery or alternator?',
         answer:
-          'Yes. We maintain a wide mix of daily drivers and ageing vehicles, balancing safety, longevity, and sensible repair planning.',
+          'The symptoms can overlap, which is why proper on-site testing is important before deciding what to replace.',
       },
     ],
-    relatedSlugs: ['diagnostics', 'suspension', 'brake-repairs'],
+    relatedSlugs: ['battery-replacement', 'mobile-diagnostics', 'emergency-breakdown-help'],
+    icon: TimerReset,
+  },
+  {
+    slug: 'general-mechanical-repairs',
+    title: 'General Mechanical Repairs',
+    shortTitle: 'General Mechanical Repairs',
+    summary: 'Practical on-site mechanical help for common faults, leaks, noises, and repair concerns.',
+    intro:
+      'On-Spot handles a wide range of everyday mechanical problems, with an honest assessment of what can be repaired mobile and what may need a different next step.',
+    includes: [
+      'Inspection of common mechanical concerns',
+      'Repair advice and quoting before work starts',
+      'Mobile repair work where suitable',
+      'Clear explanation of parts, labour, and urgency',
+    ],
+    symptoms: [
+      'Unusual noises, leaks, or vibration',
+      'The vehicle feels unreliable or unsafe',
+      'You need a mechanic to inspect a problem at your location',
+    ],
+    whyItMatters: [
+      'A practical inspection helps prioritise urgent issues',
+      'Mobile access makes it easier to get answers quickly',
+      'Timely repairs can prevent larger failures later',
+    ],
+    estimate:
+      'For accurate booking, describe the issue, the vehicle, and whether the car is at home, work, or another location.',
+    faq: [
+      {
+        question: 'Can every repair be done on-site?',
+        answer:
+          'No. Many common repairs can be handled mobile, but some jobs depend on access, tooling, parts, or safety requirements.',
+      },
+      {
+        question: 'What should I send before requesting a quote?',
+        answer:
+          'Vehicle details, a short description of the problem, any warning lights, and photos if helpful will speed up quoting.',
+      },
+    ],
+    relatedSlugs: ['mobile-diagnostics', 'brake-repairs', 'starter-and-alternator'],
     icon: Wrench,
   },
   {
-    slug: 'diagnostics',
-    title: 'Diagnostics',
-    shortTitle: 'Diagnostics',
-    summary: 'Accurate fault finding for warning lights, performance issues, and intermittent problems.',
+    slug: 'pre-purchase-inspections',
+    title: 'Pre-Purchase Inspections',
+    shortTitle: 'Pre-Purchase Inspections',
+    summary: 'On-site vehicle inspections to help you make a more informed buying decision.',
     intro:
-      'When a car is not behaving as it should, AutoPlus uses a methodical diagnostic process to identify the actual cause before recommending repairs.',
+      'If you are considering a used vehicle, On-Spot can inspect it at the seller’s location and provide practical feedback on condition, visible issues, and obvious concerns.',
     includes: [
-      'Scan-tool testing and system fault-code review',
-      'Electrical and sensor fault investigation',
-      'Performance, idle, and warning-light diagnosis',
-      'Explanation of findings and next recommended action',
+      'On-site condition inspection',
+      'Visible mechanical and safety observations',
+      'Practical feedback before you commit to the purchase',
+      'Convenient booking at the vehicle location',
     ],
     symptoms: [
-      'Check engine or other dashboard warning lights',
-      'Poor fuel economy, rough idle, or loss of power',
-      'Intermittent issues that are hard to pinpoint',
+      'You are buying a used car privately',
+      'You want another set of eyes before paying a deposit',
+      'You need an inspection at the seller’s home or workplace',
     ],
     whyItMatters: [
-      'Correct diagnosis avoids replacing parts unnecessarily',
-      'Hidden faults can affect safety, fuel use, or emissions compliance',
-      'A clear diagnostic outcome creates a more reliable repair plan',
+      'An inspection can highlight issues you may otherwise miss',
+      'It supports a more confident purchasing decision',
+      'Mobile inspections save time when the car is not near you',
     ],
-    estimate: 'Diagnostic inspections are quoted first. Further work is only recommended once the findings are confirmed.',
+    estimate:
+      'Share the vehicle details, seller location, and timing pressure so we can confirm whether the inspection can be scheduled.',
     faq: [
       {
-        question: 'Can you diagnose an issue even if the warning light turns off?',
+        question: 'Can you inspect a car at the seller’s home?',
         answer:
-          'Often, yes. Stored historical faults and system testing can still provide direction, especially if the vehicle is booked in soon after the issue occurs.',
+          'Yes, provided the location is accessible and the seller is available for the inspection window.',
       },
       {
-        question: 'Do diagnostics include a repair?',
+        question: 'Is a pre-purchase inspection a guarantee?',
         answer:
-          'Not automatically. Diagnostics identify the fault and the appropriate remedy. Repairs are quoted separately for approval.',
+          'No inspection can guarantee future reliability, but it can reveal visible faults and help you make a more informed decision.',
       },
     ],
-    relatedSlugs: ['mechanical-repairs', 'batteries', 'air-conditioning'],
-    icon: SearchCheck,
+    relatedSlugs: ['mobile-diagnostics', 'general-mechanical-repairs', 'mobile-log-book-servicing'],
+    icon: CarFront,
   },
   {
-    slug: 'batteries',
-    title: 'Batteries',
-    shortTitle: 'Batteries',
-    summary: 'Battery testing and replacement service to keep your vehicle starting reliably.',
+    slug: 'emergency-breakdown-help',
+    title: 'Emergency Breakdown Help',
+    shortTitle: 'Emergency Breakdown Help',
+    summary: 'Fast mobile support for common roadside or no-start issues where access and safety allow.',
     intro:
-      'Whether the issue is a tired battery, charging-system problem, or intermittent starting concern, AutoPlus checks the broader system before recommending replacement.',
+      'When your car lets you down unexpectedly, On-Spot can assist with common urgent issues such as no-start faults, battery problems, and basic breakdown diagnosis.',
     includes: [
-      'Battery health and charging-system testing',
-      'Replacement battery fitting where required',
-      'Terminal inspection and starting-system checks',
-      'Advice on battery life and usage patterns',
+      'Roadside or on-location inspection where suitable',
+      'Battery, starting, and obvious fault checks',
+      'Advice on immediate next steps if full repair is not possible on-site',
+      'Clear communication about access, urgency, and safety',
     ],
     symptoms: [
-      'Slow cranking or no-start condition',
-      'Electrical resets or low-voltage warnings',
-      'Battery older than expected service life',
+      'Vehicle will not start away from home',
+      'You need urgent help at roadside, work, or another location',
+      'A fault has left the car unsafe or unreliable to move',
     ],
     whyItMatters: [
-      'Battery and charging issues can cause unexpected breakdowns',
-      'System testing avoids replacing a battery when another fault is present',
-      'Reliable starting matters for daily commuting and family travel',
+      'Quick on-site help can reduce stress and downtime',
+      'Some issues can be resolved without towing',
+      'A mechanic’s assessment helps you decide the safest next move',
     ],
-    estimate: 'Battery testing is quick, and many replacements can be completed in a short workshop visit.',
+    estimate:
+      'Share your exact location, the issue, and whether the vehicle is in a safe place so we can advise on attendance.',
     faq: [
       {
-        question: 'How long should a car battery last?',
+        question: 'Do you attend roadside callouts?',
         answer:
-          'Typical life is often three to five years, but climate, trip length, start-stop systems, and driving habits all affect battery longevity.',
+          'We can assist with many roadside situations depending on location access, conditions, and the type of fault.',
       },
       {
-        question: 'Can you test the alternator too?',
+        question: 'What if the repair cannot be done on-site?',
         answer:
-          'Yes. We check the broader charging system so the cause of the issue is properly understood before any replacement is recommended.',
+          'We will explain what has been found and help you understand the most practical next step, including whether towing is needed.',
       },
     ],
-    relatedSlugs: ['diagnostics', 'log-book-servicing', 'mechanical-repairs'],
-    icon: BatteryCharging,
-  },
-  {
-    slug: 'air-conditioning',
-    title: 'Air Conditioning',
-    shortTitle: 'Air Conditioning',
-    summary: 'Cabin comfort and climate-system servicing for stronger cooling and reliable performance.',
-    intro:
-      'AutoPlus inspects air conditioning performance, system pressures, and related components to restore cooling properly rather than treating only the symptom.',
-    includes: [
-      'Cooling performance inspection and leak awareness',
-      'System pressure and component checks',
-      'Air conditioning service guidance and quoting',
-      'Advice on cabin filters and comfort-related maintenance',
-    ],
-    symptoms: [
-      'Weak or inconsistent cooling',
-      'Unpleasant odours from vents',
-      'A/C not engaging or taking too long to cool',
-    ],
-    whyItMatters: [
-      'Comfort affects driver concentration and everyday usability',
-      'Ignoring small faults can lead to larger compressor or seal issues',
-      'Healthy airflow improves demisting and cabin environment',
-    ],
-    estimate: 'A/C inspections are quoted up front. Time required depends on whether the issue is service-related or a component fault.',
-    faq: [
-      {
-        question: 'Should I service my A/C even if it still works?',
-        answer:
-          'If performance is dropping, airflow smells stale, or cooling is inconsistent, it is worth inspecting early before the system deteriorates further.',
-      },
-      {
-        question: 'Do you check cabin filters as part of the visit?',
-        answer:
-          'Yes. Cabin filters are commonly reviewed because they influence airflow, odour, and interior comfort.',
-      },
-    ],
-    relatedSlugs: ['log-book-servicing', 'diagnostics', 'batteries'],
-    icon: Snowflake,
-  },
-  {
-    slug: 'suspension',
-    title: 'Suspension',
-    shortTitle: 'Suspension',
-    summary: 'Ride, steering, and suspension repair work that improves comfort, control, and tyre wear.',
-    intro:
-      'AutoPlus checks shocks, struts, mounts, bushes, and related steering components when a vehicle no longer feels composed or wears tyres unevenly.',
-    includes: [
-      'Shock, strut, and suspension component inspection',
-      'Noise, looseness, and ride-quality diagnosis',
-      'Steering and front-end repair recommendations',
-      'Guidance on follow-up alignment where required',
-    ],
-    symptoms: [
-      'Knocking noises over bumps',
-      'Vehicle feels unstable or unsettled in corners',
-      'Uneven tyre wear or vague steering feel',
-    ],
-    whyItMatters: [
-      'Suspension affects braking stability and road holding',
-      'Unresolved wear can accelerate tyre and component damage',
-      'A composed vehicle is safer and more comfortable on long drives',
-    ],
-    estimate: 'Inspection comes first. Repair timing depends on the components involved and whether alignment or additional steering work is needed.',
-    faq: [
-      {
-        question: 'How do I know if my suspension needs attention?',
-        answer:
-          'Clunks, bouncing, poor steering feel, and uneven tyre wear are common indicators that the system should be checked.',
-      },
-      {
-        question: 'Will suspension repairs improve tyre life?',
-        answer:
-          'Often, yes. Worn suspension and steering components can cause poor tyre contact and irregular wear patterns.',
-      },
-    ],
-    relatedSlugs: ['brake-repairs', 'mechanical-repairs', 'log-book-servicing'],
-    icon: Gauge,
+    relatedSlugs: ['battery-replacement', 'starter-and-alternator', 'mobile-diagnostics'],
+    icon: CircleAlert,
   },
 ]
 

@@ -1,44 +1,44 @@
 import type { NavItem, Review } from '../lib/types'
 
 export const navItems: NavItem[] = [
+  { label: 'Home', to: '/' },
   { label: 'Services', to: '/services' },
-  { label: 'Locations', to: '/locations' },
+  { label: 'How It Works', to: '/how-it-works' },
+  { label: 'Areas We Serve', to: '/areas-we-serve' },
   { label: 'About', to: '/about' },
-  { label: 'Reviews', to: '/reviews' },
-  { label: 'Franchising', to: '/franchising' },
   { label: 'Contact', to: '/contact' },
 ]
 
 export const trustStats = [
-  { label: 'Since 1990', value: '35+ Years' },
-  { label: 'Qualified Mechanics', value: 'Dealer-grade care' },
-  { label: '11 Locations', value: 'Across Victoria' },
-  { label: 'Warranty-Safe Servicing', value: 'Manufacturer-aware' },
+  { label: 'We Come To You', value: 'On-Site Service' },
+  { label: 'Mobile Servicing', value: 'Home Or Work' },
+  { label: 'Diagnostics & Repairs', value: 'Practical Support' },
+  { label: 'Home, Office & Roadside', value: 'Where You Need Us' },
 ]
 
 export const featuredReviews: Review[] = [
   {
     name: 'Melissa T.',
-    location: 'Geelong',
-    service: 'Log Book Service',
+    location: 'Werribee',
+    service: 'Mobile Log Book Servicing',
     rating: 5,
     quote:
-      'AutoPlus handled the service exactly as promised, explained what could wait, and had the car ready before school pickup.',
+      'The mechanic arrived at my office car park, completed the service on-site, and explained everything clearly before leaving.',
   },
   {
     name: 'Daniel R.',
-    location: 'Bendigo',
+    location: 'Dandenong',
     service: 'Brake Repairs',
     rating: 5,
     quote:
-      'The quote was clear, the technicians showed me the worn parts, and there were no surprises when I collected the vehicle.',
+      'Booking was simple, the quote was clear, and having the repair done at home saved me most of the day.',
   },
   {
     name: 'Priya S.',
     location: 'Ringwood',
-    service: 'Diagnostics',
+    service: 'Mobile Diagnostics',
     rating: 5,
     quote:
-      'We needed a fast answer on an engine warning light before a regional trip. AutoPlus diagnosed it, quoted it, and fixed it the same day.',
+      'We had a warning light come on before a trip and On-Spot worked through the issue on-site without us needing a tow or garage visit.',
   },
 ]

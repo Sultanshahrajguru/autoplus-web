@@ -27,11 +27,11 @@ export function ServiceDetailPage() {
               <Icon className="h-7 w-7 text-accent" />
             </div>
             <p className="mt-6 font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
-              What to expect
+              Mobile booking guidance
             </p>
             <p className="mt-3 text-sm leading-7 text-metal-300">{service.estimate}</p>
             <div className="mt-6 rounded-2xl border border-graphite-900/8 bg-metal-100 p-4 text-sm leading-7 text-metal-200">
-              {service.intro}
+              This service may be available at your home, office, or selected roadside location depending on access, the vehicle, and the type of work required.
             </div>
           </div>
         }
@@ -42,8 +42,8 @@ export function ServiceDetailPage() {
           { label: service.title },
         ]}
         eyebrow="Service Detail"
-        primaryCta={{ label: 'Book This Service', to: '/contact' }}
-        secondaryCta={{ label: 'View Locations', to: '/locations' }}
+        primaryCta={{ label: 'Book Mobile Mechanic', to: '/contact' }}
+        secondaryCta={{ label: 'Request Quote', to: '/contact' }}
         title={service.title}
       />
 
@@ -51,7 +51,7 @@ export function ServiceDetailPage() {
         <div className="section-wrap grid gap-6 lg:grid-cols-3">
           <article className="panel-light p-7 lg:col-span-2">
             <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
-              What the service includes
+              What can be done on-site
             </h2>
             <ul className="mt-6 grid gap-4 text-base leading-7 text-graphite-700 sm:grid-cols-2">
               {service.includes.map((item) => (
@@ -64,21 +64,23 @@ export function ServiceDetailPage() {
 
           <aside className="panel-dark p-7">
             <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
-              Estimate guidance
+              Before you book
             </p>
-            <p className="mt-4 text-sm leading-7 text-metal-300">{service.estimate}</p>
-            <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/10 p-4 text-sm leading-7 text-metal-200">
-              Final timing and pricing depend on vehicle type, workshop findings, and whether additional components are required.
+            <p className="mt-4 text-sm leading-7 text-metal-300">
+              Share your vehicle make, model, year, suburb, and a short description of the problem so we can prepare for the visit properly.
+            </p>
+            <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/8 p-4 text-sm leading-7 text-metal-200">
+              The more detail you provide before booking, the easier it is to assess whether the work can be completed on-site.
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="border-y border-graphite-900/8 bg-[#eef1f4] py-20 sm:py-24">
+      <section className="border-y border-graphite-900/8 bg-[#f4f5f8] py-20 sm:py-24">
         <div className="section-wrap grid gap-6 lg:grid-cols-2">
           <article className="panel-dark p-7">
             <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
-              Common symptoms
+              When you may need this service
             </h2>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-metal-300">
               {service.symptoms.map((item) => (
@@ -90,7 +92,7 @@ export function ServiceDetailPage() {
           </article>
           <article className="panel-dark p-7">
             <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
-              Why it matters
+              Why it is worth booking early
             </h2>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-metal-300">
               {service.whyItMatters.map((item) => (
@@ -110,7 +112,7 @@ export function ServiceDetailPage() {
               Frequently asked questions
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-metal-300">
-              Clear answers help customers make faster decisions. Here are the common questions we would expect around this service.
+              These answers focus on how the mobile booking works, what information to provide, and what to expect from an on-site visit.
             </p>
             <div className="mt-8">
               <FaqList items={service.faq} />
@@ -134,10 +136,10 @@ export function ServiceDetailPage() {
             </div>
             <div className="mt-8 space-y-3">
               <Button className="w-full" to="/contact">
-                Book a Service
+                Book Mobile Mechanic
               </Button>
-              <Button className="w-full" to="/locations" variant="secondary">
-                Find a Centre
+              <Button className="w-full" to="/contact" variant="secondary">
+                Request Quote
               </Button>
             </div>
           </aside>

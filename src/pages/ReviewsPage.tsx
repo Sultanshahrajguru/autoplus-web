@@ -12,10 +12,10 @@ export function ReviewsPage() {
         aside={
           <div className="panel-dark p-6">
             <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
-              Review themes
+              Why people book
             </p>
             <div className="mt-6 grid gap-3">
-              {['Clear quoting', 'Professional communication', 'Fast diagnostics', 'Reliable follow-through'].map((item) => (
+              {['Saves time', 'No waiting rooms', 'Convenient on-site help', 'Clear communication'].map((item) => (
                 <div className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3 text-sm text-metal-200" key={item}>
                   {item}
                 </div>
@@ -23,12 +23,12 @@ export function ReviewsPage() {
             </div>
           </div>
         }
-        copy="Reviews help explain the AutoPlus experience in the language that matters most to customers: trust, clarity, convenience, and workmanship."
+        copy="Customer feedback on a mobile mechanic site should reinforce convenience, clarity, and the value of getting help where the vehicle is located."
         crumbs={[{ label: 'Home', to: '/' }, { label: 'Reviews' }]}
-        eyebrow="Customer Reviews"
-        primaryCta={{ label: 'Book a Service', to: '/contact' }}
-        secondaryCta={{ label: 'Find a Centre', to: '/locations' }}
-        title="Proof that the process feels as strong as the repair."
+        eyebrow="Reviews"
+        primaryCta={{ label: 'Book Mobile Mechanic', to: '/contact' }}
+        secondaryCta={{ label: 'Get a Quote', to: '/contact' }}
+        title="Real-world reasons customers choose a mobile mechanic."
       />
 
       <section className="py-20 sm:py-24">

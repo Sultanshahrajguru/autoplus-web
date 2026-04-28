@@ -1,4 +1,4 @@
-import { ArrowRight, Clock3, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import type { Location } from '../../lib/types'
 import { formatPhoneForHref } from '../../lib/utils'
@@ -17,23 +17,19 @@ export function LocationCard({ location }: { location: Location }) {
           </p>
         </div>
         <span className="rounded-full border border-graphite-900/8 px-3 py-1 text-xs uppercase tracking-[0.18em] text-metal-300">
-          {location.coordinatesLabel}
+          Coverage
         </span>
       </div>
       <div className="mt-6 space-y-3 text-sm text-metal-300">
-        <p className="inline-flex items-center gap-2">
-          <Clock3 className="h-4 w-4 text-accent" />
-          {location.hours[0]}
-        </p>
         <a className="inline-flex items-center gap-2" href={formatPhoneForHref(location.phone)}>
           <Phone className="h-4 w-4 text-accent" />
           {location.phone}
         </a>
       </div>
       <div className="mt-6 flex flex-wrap gap-2">
-        {location.services.slice(0, 4).map((service) => (
-          <span className="rounded-full border border-graphite-900/8 px-3 py-1 text-xs uppercase tracking-[0.14em] text-metal-300" key={service}>
-            {service}
+        {location.nearbySuburbs.slice(0, 4).map((suburb) => (
+          <span className="rounded-full border border-graphite-900/8 px-3 py-1 text-xs uppercase tracking-[0.14em] text-metal-300" key={suburb}>
+            {suburb}
           </span>
         ))}
       </div>
@@ -41,9 +37,9 @@ export function LocationCard({ location }: { location: Location }) {
       <div className="mt-auto pt-8">
         <Link
           className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-graphite-950"
-          to={`/locations/${location.slug}`}
+          to={`/areas-we-serve/${location.slug}`}
         >
-          View Centre
+          View area
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>

@@ -3,14 +3,13 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { Button } from '../components/ui/Button'
 import { PageHero } from '../components/ui/PageHero'
 import { locationMap } from '../data/locations'
-import { formatPhoneForHref } from '../lib/utils'
 
 export function LocationDetailPage() {
   const { locationSlug } = useParams()
   const location = locationSlug ? locationMap[locationSlug] : undefined
 
   if (!location) {
-    return <Navigate replace to="/locations" />
+    return <Navigate replace to="/areas-we-serve" />
   }
 
   return (
@@ -19,7 +18,7 @@ export function LocationDetailPage() {
         aside={
           <div className="panel-dark p-6">
             <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
-              Centre details
+              Area details
             </p>
             <div className="mt-6 space-y-4 text-sm text-metal-200">
               <p className="inline-flex items-start gap-2">
@@ -40,12 +39,12 @@ export function LocationDetailPage() {
         copy={location.summary}
         crumbs={[
           { label: 'Home', to: '/' },
-          { label: 'Locations', to: '/locations' },
+          { label: 'Areas We Serve', to: '/areas-we-serve' },
           { label: location.suburb },
         ]}
-        eyebrow="Location Detail"
-        primaryCta={{ label: 'Book This Centre', to: '/contact' }}
-        secondaryCta={{ label: 'Call the Centre', to: '/contact' }}
+        eyebrow="Area Detail"
+        primaryCta={{ label: 'Book Mobile Mechanic', to: '/contact' }}
+        secondaryCta={{ label: 'Request Quote', to: '/contact' }}
         title={location.name}
       />
 
@@ -53,12 +52,12 @@ export function LocationDetailPage() {
         <div className="section-wrap grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
           <div className="panel-light p-7">
             <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
-              Centre overview
+              Coverage overview
             </h2>
             <p className="mt-4 text-base leading-8 text-graphite-700">{location.summary}</p>
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               <div className="rounded-3xl border border-graphite-900/10 bg-metal-100 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-graphite-600">Opening hours</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-graphite-600">Typical availability</p>
                 <div className="mt-3 space-y-2 text-sm leading-7 text-graphite-800">
                   {location.hours.map((hour) => (
                     <p key={hour}>{hour}</p>
@@ -66,18 +65,17 @@ export function LocationDetailPage() {
                 </div>
               </div>
               <div className="rounded-3xl border border-graphite-900/10 bg-metal-100 p-5">
-                <p className="text-xs uppercase tracking-[0.22em] text-graphite-600">Contact</p>
-                <p className="mt-3 text-sm leading-7 text-graphite-800">{location.address}</p>
-                <a className="mt-2 inline-flex text-sm font-semibold text-graphite-950" href={formatPhoneForHref(location.phone)}>
-                  {location.phone}
-                </a>
+                <p className="text-xs uppercase tracking-[0.22em] text-graphite-600">Booking note</p>
+                <p className="mt-3 text-sm leading-7 text-graphite-800">
+                  Exact availability depends on your suburb, access, job type, and the day you would like booked.
+                </p>
               </div>
             </div>
           </div>
 
           <aside className="panel-dark p-7">
             <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
-              Map placeholder
+              Coverage map placeholder
             </p>
             <div className="mt-5 rounded-[28px] border border-graphite-900/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7))] p-5">
               <div className="grid-road flex h-64 items-end rounded-[20px] border border-graphite-900/8 p-5">
@@ -87,7 +85,7 @@ export function LocationDetailPage() {
                   </p>
                   <p className="mt-2 text-sm text-metal-300">{location.coordinatesLabel}</p>
                   <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/8 px-3 py-1 text-xs uppercase tracking-[0.18em] text-accent">
-                    Interactive map to be connected later
+                    Service radius to be confirmed by actual address
                   </p>
                 </div>
               </div>
@@ -96,11 +94,11 @@ export function LocationDetailPage() {
         </div>
       </section>
 
-      <section className="border-y border-graphite-900/8 bg-[#eef1f4] py-20 sm:py-24">
+      <section className="border-y border-graphite-900/8 bg-[#f4f5f8] py-20 sm:py-24">
         <div className="section-wrap grid gap-6 lg:grid-cols-3">
           <article className="panel-dark p-7">
             <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
-              Services available
+              Services commonly booked
             </h2>
             <div className="mt-6 flex flex-wrap gap-3">
               {location.services.map((service) => (
@@ -112,7 +110,7 @@ export function LocationDetailPage() {
           </article>
           <article className="panel-dark p-7">
             <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
-              Local trust points
+              What to know before booking
             </h2>
             <ul className="mt-6 space-y-3 text-sm leading-7 text-metal-300">
               {location.trustPoints.map((point) => (
@@ -141,7 +139,7 @@ export function LocationDetailPage() {
         <div className="section-wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
           <div>
             <h2 className="font-display text-4xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
-              Customer feedback
+              Local customer feedback
             </h2>
             <div className="mt-8 grid gap-5 md:grid-cols-2">
               {location.reviews.map((review) => (
@@ -160,23 +158,23 @@ export function LocationDetailPage() {
           </div>
           <aside className="panel-dark p-7">
             <p className="font-display text-2xl font-semibold uppercase tracking-[0.06em] text-graphite-950">
-              Book this centre
+              Need service in this area?
             </p>
             <p className="mt-4 text-sm leading-7 text-metal-300">
-              Choose {location.suburb} if you want a local workshop backed by the wider AutoPlus service network.
+              Tell us your exact suburb, where the car is parked, and what help you need so we can confirm the most practical mobile booking.
             </p>
             <div className="mt-8 space-y-3">
               <Button className="w-full" to="/contact">
-                Book Now
+                Book Mobile Mechanic
               </Button>
-              <Button className="w-full" href={formatPhoneForHref(location.phone)} variant="secondary">
-                Call Centre
+              <Button className="w-full" to="/contact" variant="secondary">
+                Request Quote
               </Button>
               <Link
                 className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-graphite-950"
-                to="/locations"
+                to="/areas-we-serve"
               >
-                View other centres <ArrowRight className="h-4 w-4 text-accent" />
+                View other service areas <ArrowRight className="h-4 w-4 text-accent" />
               </Link>
             </div>
           </aside>

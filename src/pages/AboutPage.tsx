@@ -1,26 +1,26 @@
-import { Award, Building2, ShieldCheck, Users2 } from 'lucide-react'
+import { Clock3, MapPinned, MessageSquareQuote, Wrench } from 'lucide-react'
 import { PageHero } from '../components/ui/PageHero'
 
 const pillars = [
   {
-    title: 'Professional standards',
-    copy: 'AutoPlus is built around workshop discipline, qualified technicians, and a service experience that feels organised from first contact to collection.',
-    icon: Award,
+    title: 'Mobile-first convenience',
+    copy: 'On-Spot Mobile Mechanix is built around helping customers avoid unnecessary garage visits by bringing servicing and repairs to them.',
+    icon: MapPinned,
   },
   {
-    title: 'Network convenience',
-    copy: 'Multiple Victorian locations help customers stay close to home or work while still dealing with one recognisable automotive brand.',
-    icon: Building2,
+    title: 'Clear communication',
+    copy: 'Customers need direct answers, practical quoting, and honest advice about what can be done on-site and what cannot.',
+    icon: MessageSquareQuote,
   },
   {
-    title: 'Trust-first communication',
-    copy: 'Customers need clear advice, prioritised recommendations, and repair explanations that make sense without technical theatre.',
-    icon: ShieldCheck,
+    title: 'Practical automotive support',
+    copy: 'The focus is on mobile servicing, diagnostics, repairs, and common breakdown-related problems for everyday vehicles.',
+    icon: Wrench,
   },
   {
-    title: 'Long-term relationships',
-    copy: 'The business model is designed around repeat service, referral trust, and consistent workmanship across locations.',
-    icon: Users2,
+    title: 'Time-saving service',
+    copy: 'A mobile mechanic visit should reduce disruption, especially for busy workdays, family schedules, or urgent car issues.',
+    icon: Clock3,
   },
 ]
 
@@ -31,10 +31,10 @@ export function AboutPage() {
         aside={
           <div className="panel-dark p-6">
             <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-graphite-950">
-              AutoPlus at a glance
+              On-Spot Mobile Mechanix
             </p>
             <div className="mt-6 grid gap-3">
-              {['Established in 1990', '11 Victorian locations', 'Qualified mechanics', 'Conversion-focused customer journey'].map((item) => (
+              {['Servicing at your location', 'Home, office and roadside callouts', 'Practical mobile mechanic support'].map((item) => (
                 <div className="rounded-2xl border border-graphite-900/8 bg-metal-100 px-4 py-3 text-sm text-metal-200" key={item}>
                   {item}
                 </div>
@@ -42,25 +42,25 @@ export function AboutPage() {
             </div>
           </div>
         }
-        copy="AutoPlus is designed to feel more dependable than the average local garage and more practical than a dealership service desk."
+        copy="On-Spot Mobile Mechanix is positioned as a practical local service business focused on making car servicing and repairs more convenient."
         crumbs={[{ label: 'Home', to: '/' }, { label: 'About' }]}
-        eyebrow="About AutoPlus"
-        primaryCta={{ label: 'Book a Service', to: '/contact' }}
-        secondaryCta={{ label: 'View Locations', to: '/locations' }}
-        title="A trusted automotive brand built for modern multi-location service."
+        eyebrow="About"
+        primaryCta={{ label: 'Book Mobile Mechanic', to: '/contact' }}
+        secondaryCta={{ label: 'Get a Quote', to: '/contact' }}
+        title="A mobile mechanic service designed to save customers time."
       />
 
       <section className="py-20 sm:py-24">
         <div className="section-wrap grid gap-6 lg:grid-cols-[0.9fr_minmax(0,1fr)]">
           <article className="panel-light p-8">
             <h2 className="font-display text-3xl font-semibold uppercase tracking-[0.04em] text-graphite-950">
-              The AutoPlus position
+              What the business should communicate
             </h2>
             <p className="mt-5 text-base leading-8 text-graphite-700">
-              AutoPlus exists for drivers who want the confidence of a professional automotive brand without the friction, opacity, or inflated feel that often comes with dealership servicing. The business is framed around trust, practical advice, and local convenience across Victoria.
+              On-Spot is not a fixed-site service chain. It is a mobile mechanic service that comes to the customer. The site should make that clear at every step, from the hero section to the booking form.
             </p>
             <p className="mt-5 text-base leading-8 text-graphite-700">
-              Customers are not looking for theatre. They want a vehicle serviced properly, faults diagnosed correctly, repair options prioritised, and communication that respects their time. That operating philosophy sits behind every AutoPlus centre.
+              The strongest value proposition is convenience: servicing, diagnostics, and practical repairs carried out at home, at work, or at another accessible location where the car already is.
             </p>
           </article>
 

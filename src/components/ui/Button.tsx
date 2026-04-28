@@ -13,7 +13,7 @@ type ButtonProps = {
 
 const styles = {
   primary:
-    'bg-accent text-white hover:bg-[#d56c36] focus-visible:outline-accent',
+    'bg-accent text-white hover:bg-[#dd2676] focus-visible:outline-accent',
   secondary:
     'border border-graphite-900/12 bg-white text-graphite-950 hover:bg-metal-100 focus-visible:outline-accent',
   ghost:

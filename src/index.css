@@ -13,8 +13,8 @@
   --color-metal-300: #5f6977;
   --color-metal-200: #3e4754;
   --color-metal-100: #f4f5f7;
-  --color-accent: #c85b22;
-  --color-accent-soft: #f3c4ad;
+  --color-accent: #cf1767;
+  --color-accent-soft: #f6bed7;
   --font-sans: 'Manrope', sans-serif;
   --font-display: 'Barlow', sans-serif;
   --shadow-panel: 0 20px 55px rgba(17, 20, 24, 0.08);
@@ -47,7 +47,7 @@
     min-width: 320px;
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.55), transparent 18%),
-      linear-gradient(135deg, #f6f7f8 0%, #eceff2 42%, #f7f7f8 100%);
+      linear-gradient(135deg, #faf9fb 0%, #f0f2f5 42%, #fbfbfc 100%);
     color: #1c2128;
   }
 
